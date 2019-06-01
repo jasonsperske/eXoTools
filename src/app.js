@@ -4,7 +4,7 @@ import path from 'path';
 import mkdirp from 'mkdirp';
 import child_process from 'child_process';
 
-if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
+if (require('electron-squirrel-startup')) {
   app.quit();
 }
 
@@ -16,7 +16,7 @@ let installedGames = ((games) => {
     let v = games[k];
     v.guid = k;
     i.push(v);
-  })
+  });
   return i;
 })(games.installed);
 
